@@ -74,6 +74,12 @@ app.post("/register", (req,res)=>{
     })
 })
 
+app.get("/logout", (req,res)=>{
+    req.logout((err)=>{
+        console.log(err)
+    });
+    res.redirect("/")
+})
     
 
 
